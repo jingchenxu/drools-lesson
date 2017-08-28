@@ -1,0 +1,47 @@
+/*
+rule:定义一个规则 ，一个规则包含了3各部分
+属性部分：定义当前规则执行的一些属性等，比如是否ke被重复执行、过期时间、生效时间等。
+条件部分，即LHS，定义当前规则的条件，如 when Message();判断当前workingMemory中是否存在Message对象。
+结果部分，即RHS，这里可以写普通的java代码，即当前规则条件满足后执行的代码，可以直接调用Fact对象的方法来操作应用。
+*/
+
+//created on: 2017-8-24
+package droolstest1
+
+//list any import classes here.
+import droolscours.Person;
+
+
+
+//declare any global variables here
+
+rule "检查是否存在"
+    
+    when
+        Person()
+    then
+        System.out.println("person对象是存在的");
+
+end
+
+
+rule "在年龄大于20的时候执行此项规则"
+
+    when
+        //conditions
+        $person : Person(age > 20)
+    then
+        //actions
+        $person.setName("老年人");
+        System.out.println("规则代码执行完成"+$person.getAge());
+end
+
+rule "在年龄小于等于20的时候执行此项规则"
+
+    when
+        $person : Person( age <= 20 )
+    then
+        $person.setName("年轻人");
+        System.out.println("规则代码执行完成"+$person.getAge());
+end       
+

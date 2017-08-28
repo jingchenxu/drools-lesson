@@ -1,0 +1,22 @@
+//created on: 2017-8-24
+package droolstest1
+
+//list any import classes here.
+import droolscours.Person;
+
+
+//declare any global variables here
+
+
+
+
+rule "测试同一个包下的规则是否会被使用"
+
+    when
+        //conditions
+        Person()
+    then
+        //actions
+        System.out.println("第二个规则被执行到了");
+
+end
