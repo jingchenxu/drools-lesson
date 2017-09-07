@@ -23,7 +23,7 @@ import util.OutputDisplay;
 
 public class TestLesson1 {
 	/**
-	 * Kiesession主要适用于与规则引擎进行交互的会话
+	 * Kiesession主要适用于与规则引擎进行交互的会话 注意你的Drools Library 中的jar包中是不能存在中文符号
 	 */
 	// 无状态的session
 	StatelessKieSession sessionStateless = null;
