@@ -1,0 +1,45 @@
+// 添加包名 package 标识一个命名空间.package是必须定义的，必须放在规则文件第一行
+package droolscours
+
+// 添加相关的类
+import droolscours.Account;
+import droolscours.CashFlow;
+import droolscours.AccountingPeriod;
+import util.OutputDisplay;
+// 声明全局变量
+global OutputDisplay showResults;
+
+rule "Your First Rule"
+     when 
+         // 添加条件
+         Account()
+     then
+         // 执行代码
+         showResults.showText("The account exits");
+end
+
+rule "Your Second Rule"
+     // include attributes such as "salience" here
+     when
+         // 条件
+     then
+         // 执行
+end
+
+rule "Your First Rule revisited AccountingPeriod"
+     when
+         CashFlow()
+     then
+         showResults.showText("the CashFlow exists, inserting on accounting Period");
+         AccountingPeriod newPeriod = new AccountingPeriod();
+         insert (newPeriod);
+end
+
+rule "Rule on AccountingPeriod that are inserting"
+     when
+         AccountingPeriod()
+     then
+         showResults.showText("Accounting period exists");
+end
+
+

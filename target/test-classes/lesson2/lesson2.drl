@@ -1,0 +1,42 @@
+//created on: 2017-8-22
+package droolscours
+
+//list any import classes here.
+import droolscours.AccountingPeriod;
+import droolscours.CashFlow;
+import droolscours.Account;
+import util.OutputDisplay;
+
+//declare any global variables here
+global OutputDisplay showResults;
+
+
+
+rule "Your First Rule revisited again"
+
+    when
+        //conditions
+        Account()
+    then
+        //actions
+        showResults.showText("The account exists");
+
+end
+
+rule "Your Second Rule"
+    //include attributes such as "salience" here...
+    when
+        //conditions
+    then
+        //actions
+
+end
+
+rule "Credit rule"
+    when
+        $cash :CashFlow($accno : accountNo ,type == CashFlow.CREDIT)
+        $acc : Account(accountno == $accno)
+    then
+        $acc.setBalance($acc.getBalance()+$cash.getAmount());
+        showResults.showText("Account no "+$acc.getAccountno()+ " has now a balance of "+$acc.getBalance());
+end
