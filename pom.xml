@@ -1,10 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <!-- 指定了当前Maven模型的版本号，对于Maven2和Maven3来说，它只能是4.0.0 -->
   <modelVersion>4.0.0</modelVersion>
+  <!-- 顾名思义，这个应该是公司名或是组织名。一般来说groupId是由三个部分组成，每个部分之间以"."分隔，第一部分是项目用途，比如用于商业的就是"com"，用于非营利性组织的就　　是"org"；第二部分是公司名，比如"tengxun"、"baidu"、"alibaba"；第三部分是你的项目名 -->
   <groupId>DroolsTest</groupId>
+  <!-- 可以认为是Maven构建的项目名，比如你的项目中有子项目，就可以使用"项目名-子项目名"的命名方式 -->
   <artifactId>DroolsTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>DroolsTest</name>
   <description>demo</description>
+  <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>4.3.12.RELEASE</spring.version>
+  </properties>
   <build>
     <testResources>
       <testResource>

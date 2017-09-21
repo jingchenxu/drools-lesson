@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <kbase name="rules" packages="lesson1">
+        <ksession name="ksession-rules"/>
+    </kbase>
+    <kbase name="rules2" packages="lesson2">
+        <ksession name="ksession-lesson2"/>
+    </kbase>
+    <kbase name="droolstest1" packages="droolstest1">
+        <ksession name="ksession-droolstest1"/>
+    </kbase> 
+    <kbase name="droolstestlist" packages="droolstestlist">
+        <ksession name="ksession-droolstestlist"/>
+    </kbase>   
+<!--     <kbase name="dtables" packages="dtables">
+        <ksession name="ksession-dtables"/>
+    </kbase>
+    <kbase name="process" packages="process">
+        <ksession name="ksession-process"/>
+    </kbase> -->
+</kmodule>

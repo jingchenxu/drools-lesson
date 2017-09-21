@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/WebContent/WEB-INF/lib" />
+      <root url="file://I:/forcommenjar/DROOLS/droolsjbpm-tools-distribution-6.5.0.Final/droolsjbpm-tools-distribution-6.5.0.Final/binaries" />
+      <root url="file://I:/forcommenjar/DROOLS/droolsjbpm-tools-distribution-6.5.0.Final/droolsjbpm-tools-distribution-6.5.0.Final/binaries" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://I:/forcommenjar/DROOLS/droolsjbpm-tools-distribution-6.5.0.Final/droolsjbpm-tools-distribution-6.5.0.Final/binaries" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/WebContent/WEB-INF/lib" recursive="false" />
+  </library>
+</component>
